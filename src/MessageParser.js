@@ -17,6 +17,8 @@ class MessageParser {
           } else if(lowerCaseMessage.includes("my password is")){
             const password = message.split("is")[1].trim()
             this.actionProvider.handlePasswordInput({ ...this.state, password });
+          }else{
+            this.actionProvider.handleInvalidInput({...this.state})
           }
     }
   }

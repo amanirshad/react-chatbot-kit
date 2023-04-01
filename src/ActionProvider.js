@@ -23,7 +23,7 @@ class ActionProvider {
     // }
 
     const message = this.createChatBotMessage(
-      `Great! Nice to meet you ${name}. Now, could you please provide me with your email?`
+      `Great! Nice to meet you ${name.name}. Now, could you please provide me with your email?`
     );
     this.updateChatbotState(message);
     this.updateChatbotState({ user: name }, "name");
@@ -37,7 +37,7 @@ class ActionProvider {
     // }
 
     const message = this.createChatBotMessage(
-      `Awesome! Your email is ${email}. Now, could you please provide me with your password?`
+      `Awesome! Your email is ${email.email}. Now, could you please provide me with your password?`
     );
     this.updateChatbotState(message);
     this.updateChatbotState({ email }, "email");
